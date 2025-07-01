@@ -1,0 +1,26 @@
+{
+  "xuat_khau_nhat": [
+    "đi nhật", "xkld nhật bản", "xuất khẩu lao động nhật", "làm việc tại nhật", "nhật bản"
+  ],
+  "xuat_khau_dai_loan": [
+    "đài loan", "xkld đài loan", "xuất khẩu lao động đài loan", "làm việc tại đài"
+  ],
+  "du_hoc_dai_loan": [
+    "du học đài loan", "du học", "học tập đài loan", "học ở đài"
+  ],
+  "chi phí": [
+    "chi phí", "bao nhiêu tiền", "phí hết bao nhiêu", "mất phí gì", "học phí", "tiền"
+  ],
+  "hồ sơ": [
+    "cần giấy tờ gì", "hồ sơ gồm những gì", "thủ tục cần", "nộp giấy tờ gì", "cần chuẩn bị gì"
+  ],
+  "quy trình": [
+    "quy trình", "bắt đầu thế nào", "đi như thế nào", "các bước", "làm từ đâu", "lộ trình"
+  ],
+  "điều kiện": [
+    "có yêu cầu gì", "điều kiện", "có cần kinh nghiệm không", "có giới hạn tuổi không"
+  ],
+  "thời gian": [
+    "mất bao lâu", "thời gian", "bao lâu", "khi nào đi", "đi được ngay không"
+  ]
+}

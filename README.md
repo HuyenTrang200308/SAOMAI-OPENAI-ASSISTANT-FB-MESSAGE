@@ -26,17 +26,6 @@ Dự án được phát triển bởi Tập đoàn Cung ứng Nhân lực Sao Ma
 
 ---
 
-├── fb_graph_api.py # Gửi/nhận tin nhắn từ Facebook
-├── openai_api.py # Kết nối với OpenAI API
-├── config.py # Biến môi trường (Facebook Token, OpenAI Key)
-├── keywords.json # Danh sách từ khóa và phản hồi
-├── run.py / main.py # Điểm khởi động Flask app
-├── test_*.py # Các file test (có thể bỏ qua khi triển khai)
-├── .env.example # Mẫu cấu hình môi trường
-└── README.md # Tài liệu dự án (file này)
-
----
-
 ## ⚙️ Cài đặt & chạy local
 
 ```bash

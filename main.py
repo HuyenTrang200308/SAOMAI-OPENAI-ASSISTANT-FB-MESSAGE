@@ -38,11 +38,7 @@ def handle_message(sender_id: str, message_text: str, quick_reply_payload: str =
         handle_quick_reply(sender_id, quick_reply_payload)
         return
 
-    # Nếu chứa từ khóa định nghĩa → xử lý luôn
-    intent = match_intent(message_text, KEYWORDS)
-    if intent:
-        ai_reply = ask_openai(message_text, sender_id)
-        return
+    # 1. Thử tìm intent từ từ khóa
 
     if sender_id not in greeted_users:
         greeted_users.add(sender_id)
@@ -66,6 +62,17 @@ def handle_message(sender_id: str, message_text: str, quick_reply_payload: str =
 
     if is_office:
         handle_during_working_hours(sender_id, now)
+        
+    intent = match_intent(message_text, KEYWORDS)
+
+    # 2. Nếu có intent → dùng OpenAI xử lý theo nội dung người dùng hỏi
+    if intent:
+        ask_openai(message_text, sender_id)
+        return
+
+    # 3. Nếu không có intent → vẫn dùng OpenAI để trả lời tự nhiên
+    ask_openai(message_text, sender_id)
+    return
 
 # -------------------------------
 # TRONG GIỜ HÀNH CHÍNH: CHỜ 5 PHÚT
@@ -144,7 +151,7 @@ def handle_quick_reply(sender_id: str, payload: str):
             hotline=HOTLINE,
             extra_button={
                 "type": "web_url",
-                "url": "https://saomai.com.vn/don-hang",
+                "url": "https://saomaixkld.vn/",
                 "title": "📋 Xem đơn hàng"
             }
         )

@@ -6,20 +6,20 @@ from typing import Optional
 from datetime import datetime
 
 def is_office_hours():
-    # now = datetime.now()
-    # hour = now.hour
-    # minute = now.minute
-    # weekday = now.weekday()  # Thứ 2 = 0, Chủ nhật = 6
+    now = datetime.now()
+    hour = now.hour
+    minute = now.minute
+    weekday = now.weekday()  # Thứ 2 = 0, Chủ nhật = 6
 
     # Nếu là thứ 7 hoặc Chủ nhật → không phải giờ hành chính
-    # if weekday >= 5:
-       # return False
+    if weekday >= 5:
+       return False
 
     # Giờ hành chính: 8h–12h và 13h–17h
-    # if 8 <= hour < 12:
-        # return True
-    # if 13 <= hour < 17:
-        # return True
+    if 8 <= hour < 12:
+        return True
+    if 13 <= hour < 17:
+        return True
 
     # Giờ nghỉ trưa hoặc ngoài giờ → không tính là giờ hành chính
     return False
